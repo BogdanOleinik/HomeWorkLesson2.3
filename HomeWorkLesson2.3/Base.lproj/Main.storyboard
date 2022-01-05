@@ -40,6 +40,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Log In">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Rc2-mo-Y05" kind="show" id="pHJ-ci-fhd"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-Tg-EQr">
                                         <rect key="frame" x="30" y="131.5" width="290" height="28.5"/>
@@ -93,10 +96,73 @@
             </objects>
             <point key="canvasLocation" x="34.399999999999999" y="68.815592203898049"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="36a-PF-dFm">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Rc2-mo-Y05" customClass="WelcomeViewController" customModule="HomeWorkLesson2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hD4-Fj-oiP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mud-QO-PVh">
+                                <rect key="frame" x="30" y="523" width="315" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="uew-cu-RTG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-iS-szz">
+                                <rect key="frame" x="148" y="268.5" width="79" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="63" id="T0X-8u-v5l"/>
+                                    <constraint firstAttribute="height" constant="70" id="fx9-Em-IAZ"/>
+                                </constraints>
+                                <string key="text">👋
+машущая рука
+Unicode: U+1F44B, UTF-8: F0 9F 91 8B</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="73"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fio-Rt-C1h">
+                                <rect key="frame" x="127" y="157" width="121" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="Lqf-xs-mz2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LBT-mC-Uxe"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="Rri-iS-szz" firstAttribute="centerX" secondItem="hD4-Fj-oiP" secondAttribute="centerX" id="6lG-lx-gxB"/>
+                            <constraint firstItem="Mud-QO-PVh" firstAttribute="leading" secondItem="LBT-mC-Uxe" secondAttribute="leading" constant="30" id="AbC-v9-6St"/>
+                            <constraint firstItem="LBT-mC-Uxe" firstAttribute="bottom" secondItem="Mud-QO-PVh" secondAttribute="bottom" constant="100" id="GrA-Dq-jIN"/>
+                            <constraint firstItem="fio-Rt-C1h" firstAttribute="top" secondItem="LBT-mC-Uxe" secondAttribute="top" constant="157" id="Nhj-Vv-JPf"/>
+                            <constraint firstItem="LBT-mC-Uxe" firstAttribute="trailing" secondItem="Mud-QO-PVh" secondAttribute="trailing" constant="30" id="cxZ-fj-4bO"/>
+                            <constraint firstItem="fio-Rt-C1h" firstAttribute="centerX" secondItem="hD4-Fj-oiP" secondAttribute="centerX" id="iCA-Es-Vxt"/>
+                            <constraint firstItem="Rri-iS-szz" firstAttribute="centerY" secondItem="hD4-Fj-oiP" secondAttribute="centerY" constant="-30" id="yab-Ch-567"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OOg-cK-13E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RcR-wc-Ygq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="69"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

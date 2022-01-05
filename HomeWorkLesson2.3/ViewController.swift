@@ -15,11 +15,14 @@ class ViewController: UIViewController {
     private let user = "User"
     private let password = "Password"
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    //Alerts
     @IBAction func forgotUserName(_ sender: Any) {
         
         let alertController = UIAlertController(title: "Oops!", message: "Your name is \(user)", preferredStyle: .alert)
@@ -28,7 +31,6 @@ class ViewController: UIViewController {
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
-    
     
     @IBAction func forgotPassword(_ sender: Any) {
         
