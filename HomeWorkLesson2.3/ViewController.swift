@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     private let user = "User"
     private let password = "Password"
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+    
+//    }
+    
     
     
     override func viewDidLoad() {
@@ -40,6 +45,17 @@ class ViewController: UIViewController {
         alertController.addAction(action)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func logInPressed() {
+        if userNameField.text != user || passwordField.text != password {
+            let alertController = UIAlertController(title: "Invalid login or password", message: "Please, enter correct login and password", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default) { (action) in }
+            
+            alertController.addAction(action)
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     
 }
 

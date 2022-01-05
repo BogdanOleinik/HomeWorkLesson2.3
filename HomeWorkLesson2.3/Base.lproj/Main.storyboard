@@ -41,6 +41,7 @@
                                             <fontDescription key="titleFontDescription" type="system" pointSize="21"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gs7-ZO-KMN"/>
                                             <segue destination="Rc2-mo-Y05" kind="show" id="pHJ-ci-fhd"/>
                                         </connections>
                                     </button>
