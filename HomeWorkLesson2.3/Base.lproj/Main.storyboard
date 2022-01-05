@@ -44,19 +44,25 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="eCc-Tg-EQr">
                                         <rect key="frame" x="30" y="131.5" width="290" height="28.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT8-UY-dvw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT8-UY-dvw">
                                                 <rect key="frame" x="0.0" y="0.0" width="133.5" height="28.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotUserName:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eDJ-fc-8IP"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-Jz-zWa">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSg-Jz-zWa">
                                                 <rect key="frame" x="156.5" y="0.0" width="133.5" height="28.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sd-D6-jXD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -78,6 +84,10 @@
                             <constraint firstItem="mDT-L7-wk9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="YcW-mw-WuK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="sGe-9A-yxs" id="Tkf-K5-wPU"/>
+                        <outlet property="userNameField" destination="sQN-GS-GFR" id="Kqy-PK-tVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
