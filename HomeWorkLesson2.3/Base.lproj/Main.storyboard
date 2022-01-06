@@ -65,7 +65,7 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Sd-D6-jXD"/>
+                                                    <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nrv-dn-kDx"/>
                                                 </connections>
                                             </button>
                                         </subviews>

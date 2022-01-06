@@ -9,12 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    var text = ""
     
     @IBAction func logOutPressed(_ sender: Any) {
         dismiss(animated: true)
