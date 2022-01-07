@@ -116,7 +116,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="logOutPressed:" destination="Rc2-mo-Y05" eventType="touchUpInside" id="rnq-0V-ULC"/>
+                                    <segue destination="yvq-gh-tnM" kind="unwind" unwindAction="unwindFor:" id="ZMB-xD-peu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rri-iS-szz">
@@ -155,8 +155,12 @@ Unicode: U+1F44B, UTF-8: F0 9F 91 8B</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OOg-cK-13E"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="fio-Rt-C1h" id="TGQ-Az-OgE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RcR-wc-Ygq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="yvq-gh-tnM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="780" y="69"/>
         </scene>

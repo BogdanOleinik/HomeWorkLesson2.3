@@ -9,9 +9,13 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    var text = ""
+    @IBOutlet var userNameLabel: UILabel!
     
-    @IBAction func logOutPressed(_ sender: Any) {
-        dismiss(animated: true)
+    var name = ""
+
+    override func viewDidLoad() {
+        userNameLabel.text = "Welcome, \(name)!"
     }
 }
+
+

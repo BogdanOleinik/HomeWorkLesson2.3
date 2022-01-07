@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.text = user
+        welcomeVC.name = user
     }
     
     //Alerts
@@ -34,6 +34,13 @@ class ViewController: UIViewController {
             showAlert(title: "Invalid login or password", message: "Please, enter correct login and password")
         }
     }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameField.text = ""
+        passwordField.text = ""
+    }
+    
+    
     private func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default) { (action) in }
