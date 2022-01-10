@@ -179,12 +179,25 @@ Unicode: U+1F44B, UTF-8: F0 9F 91 8B</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cx-6S-6qq">
+                                <rect key="frame" x="16" y="532" width="343" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show photo">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="QO2-aZ-E2o" kind="presentation" id="Xfs-3Y-yJy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rpy-0K-Mbm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Rpy-0K-Mbm" firstAttribute="bottom" secondItem="4Cx-6S-6qq" secondAttribute="bottom" constant="50" id="Gc1-De-8c7"/>
+                            <constraint firstItem="Rpy-0K-Mbm" firstAttribute="trailing" secondItem="4Cx-6S-6qq" secondAttribute="trailing" constant="16" id="Rhh-bL-XbY"/>
                             <constraint firstItem="gNc-Sq-rEm" firstAttribute="top" secondItem="Rpy-0K-Mbm" secondAttribute="top" constant="50" id="S2L-9h-iBa"/>
                             <constraint firstItem="Rpy-0K-Mbm" firstAttribute="trailing" secondItem="gNc-Sq-rEm" secondAttribute="trailing" constant="16" id="Twf-e1-L93"/>
+                            <constraint firstItem="4Cx-6S-6qq" firstAttribute="leading" secondItem="Rpy-0K-Mbm" secondAttribute="leading" constant="16" id="ZzN-UD-X4P"/>
                             <constraint firstItem="gNc-Sq-rEm" firstAttribute="leading" secondItem="Rpy-0K-Mbm" secondAttribute="leading" constant="16" id="ejB-b3-pVg"/>
                         </constraints>
                     </view>
@@ -196,6 +209,37 @@ Unicode: U+1F44B, UTF-8: F0 9F 91 8B</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBP-Ef-O7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2924" y="69"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="sG4-04-uM3">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="QO2-aZ-E2o" customClass="ImageViewController" customModule="HomeWorkLesson2_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ll-g3-8vZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rhm-oe-GuA">
+                                <rect key="frame" x="41.5" y="183.5" width="292" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="292" id="Lgj-nl-ixt"/>
+                                    <constraint firstAttribute="height" constant="300" id="Op8-dt-dSc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ec7-nW-roj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rhm-oe-GuA" firstAttribute="centerY" secondItem="7Ll-g3-8vZ" secondAttribute="centerY" id="fz9-wR-4Rr"/>
+                            <constraint firstItem="rhm-oe-GuA" firstAttribute="centerX" secondItem="7Ll-g3-8vZ" secondAttribute="centerX" id="syf-6q-L9P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="rhm-oe-GuA" id="Ydm-Gl-s3M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEC-D6-6gy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3645.5999999999999" y="68.815592203898049"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1XZ-fx-Hby">

@@ -34,7 +34,7 @@ struct Person {
         Person(
             name: "Bogdan",
             surname: "Oleinik",
-            image: "Photo"
+            image: "MyPhoto"
         )
     }
 }
